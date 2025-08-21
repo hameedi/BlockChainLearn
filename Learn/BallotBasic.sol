@@ -22,6 +22,7 @@ contract Ballot {
         chairperson = msg.sender;
         voters[chairperson].weight = 2;
         proposals.length = _numProposals; 
+
     }
 
     /// Give $(toVoter) the right to vote on this ballot.
