@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.4.10+commit.f0d539ae"
+		"version": "0.4.17+commit.bdeb9e52"
 	},
 	"language": "Solidity",
 	"output": {
@@ -16,6 +16,7 @@
 				"name": "register",
 				"outputs": [],
 				"payable": false,
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -29,14 +30,7 @@
 					}
 				],
 				"payable": false,
-				"type": "function"
-			},
-			{
-				"constant": false,
-				"inputs": [],
-				"name": "advanceState",
-				"outputs": [],
-				"payable": false,
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -50,6 +44,7 @@
 				"name": "vote",
 				"outputs": [],
 				"payable": false,
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -63,19 +58,7 @@
 					}
 				],
 				"payable": false,
-				"type": "function"
-			},
-			{
-				"constant": true,
-				"inputs": [],
-				"name": "timeNow",
-				"outputs": [
-					{
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"payable": false,
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -86,6 +69,7 @@
 					}
 				],
 				"payable": false,
+				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
 			{
@@ -101,17 +85,17 @@
 		"userdoc": {
 			"methods": {
 				"register(address)": {
-					"notice": "Give $(toVoter) the right to vote on this ballot. May only be called by $(chairperson)."
+					"notice": "Give $(toVoter) the right to vote on this ballot.\r May only be called by $(chairperson).\r"
 				},
 				"vote(uint8)": {
-					"notice": "Give a single vote to proposal $(toProposal)."
+					"notice": "Give a single vote to proposal $(toProposal).\r"
 				}
 			}
 		}
 	},
 	"settings": {
 		"compilationTarget": {
-			"Learn/BallotWithStages.sol": "Ballot"
+			"Learn/BallotWithModifier.sol": "Ballot"
 		},
 		"libraries": {},
 		"optimizer": {
@@ -121,10 +105,10 @@
 		"remappings": []
 	},
 	"sources": {
-		"Learn/BallotWithStages.sol": {
-			"keccak256": "0x704690740350ae8fb0d492dbf1cd8fb72d4ba37d06428b87da50250d88db774b",
+		"Learn/BallotWithModifier.sol": {
+			"keccak256": "0x54875ca5b3b337cc2f97aafa90be9db5f61ab3a93227519e644aa49b5ae5a9bf",
 			"urls": [
-				"bzzr://2fc875bf5e13fa3be62770a0cc955353081f12f0601ceb52c8902207481b28f6"
+				"bzzr://436c70c3c6ec99b25c5e29d5b36f48f6ddf5407b93675421d98896e9bbd1938d"
 			]
 		}
 	},
